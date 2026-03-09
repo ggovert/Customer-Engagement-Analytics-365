@@ -1,17 +1,25 @@
-# Data_Analytics_Project
+# Customer Engagement Analytics on 365 Platform 
 
-## Project 1: 365_Customer_Engagement_Data_Analytics
-### Project Overview:
+### Project Overview / Objective:
 This project aims to provide insights into customer behavior at 365 Data Science. By analyzing various aspects of the customer behaviour data, we seek to gain a deeper understanding of customer behavior that impacted the company's performance
 
 ### Data Source:
 
-All the dataset (txt file) that I used for this project is in the tableau_datasource folder. Containing all the needed data to make the customer behaviour dashboard
+All the datasets (txt files) that I used for this project are in the tableau_datasource folder. Containing all the needed data to make the customer behaviour dashboard
 
 Data Definition:
 - Engagement: The beginning of the lecture courses, quiz, or exam
 - Onboarding: The first time engagement
 - Student Type: Free-plan student or Paying student (monthly, quarterly, annually)
+
+### Process
+- Defining Objectives: Identified key performance metrics like onboarding rates and subscription conversion to align data with business goals.
+- Data Engineering: Used MySQL to clean datasets and resolve redundancies between free and paid user logs using nested functions and complex joins.
+- Behavioral Analysis: Conducted cohort analysis to compare engagement trends, identifying the impact of marketing campaigns and gamification.
+- Visualization: Developed a 5-page Tableau dashboard to transform raw data into interactive, stakeholder-ready insights.
+
+### Value Proposition
+This project demonstrates my ability to bridge the gap between complex data engineering and strategic business growth. By leveraging SQL for backend optimization and Tableau for visual storytelling, I transformed raw student engagement data into actionable insights—identifying the direct impact of marketing campaigns and providing clear, data-driven recommendations to improve customer retention.
 
 ### Tools
 
@@ -25,8 +33,8 @@ In this phase, I used MySQL for the data preparation, and I performed the follow
 3. Data cleaning and formatting
 
 ### Exploratory Data Analysis
-EDA involved exploring the customer behavior data to answer key questions, such as:
-- How Engaged are the students inside the platform, and how can this metric be improved?
+EDA involved exploring the customer behaviour data to answer key questions, such as:
+- How engaged are the students inside the platform, and how can this metric be improved?
 - How long do students stay engaged on the  platform, and how can this period be extended?
 - What's the difference in behavior between free and paid students?
 - Which are the most popular courses on the platform
@@ -42,7 +50,7 @@ WHEN x THEN y
 END as paid
 FROM table_a a LEFT JOIN table_b b USING (student_id);
 ```
-After analyzing the data, I discovered that there are some duplicate data entries from the same student in the student_engagement table as a result of the free and paid subscriptions. I did this by using nested functions in SQL and ensuring that I only used the paid subscription as the beginning of engagement data.After that, i save this new data as csv with the name student_engagement.csv
+After analyzing the data, I discovered that there are some duplicate data entries from the same student in the student_engagement table as a result of the free and paid subscriptions. I did this by using nested functions in SQL and ensuring that I used only the paid subscription as the starting point for engagement data. After that, I save this new data as csv with the name student_engagement.csv
 
 ### Creating Dashboard
 Create 5 dashboards in total to analyze the data
